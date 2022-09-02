@@ -1,0 +1,29 @@
+
+@media only screen and (max-width: 650px){
+    .footer-link {
+        font-size: 12px;
+    }
+    .footer-link2 {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .footer-link2 p {
+        font-size: 10px;
+        margin: 2px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+	
+    .footer-link {
+        font-size: 10px;
+    }
+    .footer-link2 {
+        padding: 2px;
+    }
+    .footer-link2 p {
+        font-size: 8px;
+        margin: 2px;
+    }
+}
+
