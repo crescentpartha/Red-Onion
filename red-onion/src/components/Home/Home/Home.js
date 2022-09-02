@@ -1,18 +1,17 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Banner from '../Banner/Banner';
-import Breakfasts from '../Breakfast/Breakfasts/Breakfasts';
-import Dinners from '../Dinner/Dinners/Dinners';
-import Lunches from '../Lunch/Lunches/Lunches';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='d-flex align-items-center justify-content-center mt-3'>
-                <span className='px-5'><Breakfasts></Breakfasts></span>
-                <span className='px-5'><Lunches></Lunches></span>
-                <span className='px-5'><Dinners></Dinners></span>
+            <div className='mt-3'>
+                <nav className='d-flex gap-5 align-items-center justify-content-center'>
+                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='breakfast'>Breakfast</Link>
+                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='lunch'>Lunch</Link>
+                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='dinner'>Dinner</Link>
+                </nav>
             </div>
             <Outlet />
         </div>
