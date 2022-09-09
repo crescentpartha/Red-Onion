@@ -17,6 +17,7 @@ const Dinners = () => {
                     ></Dinner>)
                 }
             </Row>
+            <button className='btn btn-secondary bg-secondary bg-opacity-50 border-0 fw-semibold py-2 px-5 mt-4'>Checkout Your Food</button>
         </div>
     );
 };
