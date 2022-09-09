@@ -17,14 +17,6 @@ const Breakfast = ({ breakfast }) => {
                 </Card.Body>
             </Card>
         </Col>
-        // <div>
-        //     <img src={img} alt={name} />
-        //     <div>
-        //         <h5>{name}</h5>
-        //         <p>{description}</p>
-        //         <p>{price}</p>
-        //     </div>
-        // </div>
     );
 };
 

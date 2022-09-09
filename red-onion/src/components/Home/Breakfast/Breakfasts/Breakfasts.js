@@ -6,7 +6,7 @@ import Breakfast from '../Breakfast/Breakfast';
 
 const Breakfasts = () => {
     const [breakfasts] = useBreakfast();
-    console.log(breakfasts);
+    // console.log(breakfasts);
     return (
         <div className='breakfasts-container'>
             {/* <p className='fw-semibold'>Breakfasts: <span>{breakfasts.length}</span></p> */}
