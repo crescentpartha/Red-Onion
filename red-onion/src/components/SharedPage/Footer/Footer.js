@@ -5,11 +5,11 @@ import logoWhite from '../../../images/logo.png';
 const Footer = () => {
     return (
         <div className='bg-dark text-light'>
-            <div className='d-flex flex-wrap gap-5 pt-4 align-items-top justify-content-between px-5'>
+            <div className='d-flex flex-wrap gap-5 p-5 pb-4 align-items-top justify-content-between px-5'>
                 <div className='text-start image-icon'>
                     <img src={logoWhite} width='150' alt="Logo" />
                 </div>
-                <div className='d-flex gap-5 fs-6 align-items-center justify-content-around text-start'>
+                <div className='d-flex flex-wrap gap-5 fs-6 align-items-center justify-content-around text-start'>
                     <div className='me-md-5 footer-link'>
                         <p>About Online Food</p>
                         <p>Read our blog</p>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div className='d-flex align-items-center justify-content-between px-5 footer-link2'>
+            <div className='d-flex flex-wrap align-items-center justify-content-between px-5 py-3 footer-link2'>
                 <p className='text-secondary'>Copyright @{new Date().getFullYear()}</p>
                 <div className='d-flex align-items-center justify-content-around fs-6'>
                     <p className='me-2 me-md-5'>Privacy Policy</p>

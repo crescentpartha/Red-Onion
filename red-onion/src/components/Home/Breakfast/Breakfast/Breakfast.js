@@ -11,8 +11,10 @@ const Breakfast = ({ breakfast }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        <p>{description}</p>
-                        <h4>{price}</h4>
+                        {description}
+                    </Card.Text>
+                    <Card.Text className='fs-4 fw-semibold'>
+                        {price}
                     </Card.Text>
                 </Card.Body>
             </Card>
