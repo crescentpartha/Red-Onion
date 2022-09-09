@@ -1,0 +1,29 @@
+.breakfasts-container {
+    margin: 50px 150px;
+}
+
+@media only screen and (max-width: 1200px){
+    .breakfasts-container {
+        margin: 50px 100px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .breakfasts-container {
+        margin: 50px 80px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .breakfasts-container {
+        margin: 50px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .breakfasts-container {
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .breakfasts-container {
+        margin: 15px;
+    }
+}
