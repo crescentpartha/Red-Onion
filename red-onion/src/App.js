@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import SignUp from './components/Authentication/SignUp/SignUp';
 import Breakfasts from './components/Home/Breakfast/Breakfasts/Breakfasts';
 import Dinners from './components/Home/Dinner/Dinners/Dinners';
 import Home from './components/Home/Home/Home';
@@ -19,6 +20,7 @@ function App() {
           <Route path='lunch' element={<Lunches></Lunches>}></Route>
           <Route path='dinner' element={<Dinners></Dinners>}></Route>
         </Route>
+        <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/notFound' element={<NotFound></NotFound>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
