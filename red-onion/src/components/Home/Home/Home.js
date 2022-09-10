@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import CustomLink from '../../SharedPage/CustomLink/CustomLink';
 import Banner from '../Banner/Banner';
 
 const Home = () => {
@@ -8,9 +9,9 @@ const Home = () => {
             <Banner></Banner>
             <div className='mt-3'>
                 <nav className='d-flex gap-5 align-items-center justify-content-center'>
-                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='breakfast'>Breakfast</Link>
-                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='lunch'>Lunch</Link>
-                    <Link className='text-decoration-none text-dark fw-semibold py-2' to='dinner'>Dinner</Link>
+                    <CustomLink className='text-decoration-none text-dark fw-semibold py-2' to='breakfast'>Breakfast</CustomLink>
+                    <CustomLink className='text-decoration-none text-dark fw-semibold py-2' to='lunch'>Lunch</CustomLink>
+                    <CustomLink className='text-decoration-none text-dark fw-semibold py-2' to='dinner'>Dinner</CustomLink>
                 </nav>
             </div>
             <Outlet />
