@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useAdvertisment = () => {
     const [advertisments, setAdvertisments] = useState([]);
     useEffect( () => {
-        fetch('advertisment.json')
+        fetch('../advertisment.json')
         .then(res => res.json())
         .then(data => setAdvertisments(data));
     }, []);
