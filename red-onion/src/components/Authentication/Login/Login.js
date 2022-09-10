@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import backgroundImage from '../../../images/bannerbackground.png';
 import logoBlack from '../../../images/logo2.png';
 
-const SignUp = () => {
-
+const Login = () => {
+    
     const handleRegister = (event) => {
         event.preventDefault();
     }
@@ -49,10 +49,6 @@ const SignUp = () => {
                 <div style={containerStyle}>
                     <img src={logoBlack} width='200px' alt="Logo" />
                     <Form onSubmit={handleRegister} className='my-4'>
-                        <Form.Group className="mb-3" controlId="formBasicName">
-                            <Form.Control style={inputColor} type="name" placeholder="Name" required />
-                        </Form.Group>
-
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control style={inputColor} type="email" placeholder="Email" required />
                         </Form.Group>
@@ -61,19 +57,15 @@ const SignUp = () => {
                             <Form.Control style={inputColor} type="password" placeholder="Password" required />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-                            <Form.Control style={inputColor} type="password" placeholder="Confirm Password" required />
-                        </Form.Group>
-
                         <Button className='w-100 opacity-75 py-2' variant="danger" type="submit">
-                            Register
+                            Login
                         </Button>
                     </Form>
-                    <Link className='text-decoration-none text-danger' to='/login'>Already have an account?</Link>
+                    <Link className='text-decoration-none text-danger' to='/signup'>New to Red Onion?</Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default SignUp;
+export default Login;
