@@ -3,20 +3,22 @@ Table of Contents
 
 - [Red-Onion](#red-onion)
   - [Basic Project Setup](#basic-project-setup)
-    - [Project Setup 01 (Basic Setup)](#project-setup-01-basic-setup)
-    - [Project Setup 02 (Image - Icons - JSON data)](#project-setup-02-image---icons---json-data)
-    - [Project Setup 03 (create Routes)](#project-setup-03-create-routes)
-    - [Project Setup 04 (firebase config)](#project-setup-04-firebase-config)
-    - [Project Setup 05 (firebase Auth)](#project-setup-05-firebase-auth)
-    - [Project Setup 06 (Advance Setup)](#project-setup-06-advance-setup)
-    - [Project Setup 07 (Deploy or Hosting)](#project-setup-07-deploy-or-hosting)
+    - [Project Setup 01 (`Basic Setup`)](#project-setup-01-basic-setup)
+    - [Project Setup 02 (`Image - Icons - JSON data`)](#project-setup-02-image---icons---json-data)
+    - [Project Setup 03 (`create Routes`)](#project-setup-03-create-routes)
+    - [Project Setup 04 (`firebase config`)](#project-setup-04-firebase-config)
+    - [Project Setup 05 (`firebase Auth`)](#project-setup-05-firebase-auth)
+    - [Project Setup 06 (`Advance Setup`)](#project-setup-06-advance-setup)
+    - [Project Setup 07 (`Deploy or Hosting`)](#project-setup-07-deploy-or-hosting)
+  - [Inefficient Regular Expression Complexity in nth-check (`Fix vulnerabilities`)](#inefficient-regular-expression-complexity-in-nth-check-fix-vulnerabilities)
+    - [`Solutions`](#solutions)
 
 
 # Red-Onion
 
 ## Basic Project Setup
 
-### Project Setup 01 (Basic Setup)
+### Project Setup 01 (`Basic Setup`)
 
 - ___Create React App___
 - ___Install & Setup___ React Router
@@ -31,7 +33,9 @@ Table of Contents
 - Add ___title___ and set ___favicon.ico___ in the ___index.html___ file
 - ___CSS style___ added
 
-### Project Setup 02 (Image - Icons - JSON data)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 02 (`Image - Icons - JSON data`)
 
 - ___images___ folder added inside the ___src___ folder
 - Images ___resize & optimize___ for using
@@ -40,7 +44,9 @@ Table of Contents
 - Icons uses from ___FontAwesomeIcons___, ___HeroIcons___, ___React-Icons___ etc.
 - Install ___FontAwesomeIcons___ and use in your App
 
-### Project Setup 03 (create Routes)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 03 (`create Routes`)
 
 - Modify the ___Header___ component to make easy routing
   - ___Responsive Navber___ added from ___React-Bootstrap___
@@ -50,7 +56,9 @@ Table of Contents
 - Modify the ___Not Found___ component
 - Modify the ___Home___ component
 
-### Project Setup 04 (firebase config)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 04 (`firebase config`)
 
 - Create a ___Firebase project___ and ___Register___ my app
 - Install the ___SDK___ and ___initialize Firebase___
@@ -58,7 +66,9 @@ Table of Contents
 - Implement the ___Firebase Configuration___
 - Adding Custom Environment Variables: (___Set Environment Variables___ for Firebase Config)
 
-### Project Setup 05 (firebase Auth)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 05 (`firebase Auth`)
 
 - ___Get Form data___ in 3 different ways:
   - ___State declare & onBlur EventHandler___
@@ -70,7 +80,9 @@ Table of Contents
 - ___Verify Email___ and ___Profile update___
   - Display name and Async await
 
-### Project Setup 06 (Advance Setup)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 06 (`Advance Setup`)
 
 - ___Setup Dynamic Route___ and Access ___route params___
   - ___Reading URL Params___ (Steps): 
@@ -92,7 +104,51 @@ Table of Contents
 - Display Toast message using ___React-Toastify___
 - ___Responsive Design___ by using Vanilla CSS (___Media-Query___), ___Bootstrap___, ___React-Bootstrap___, ___Tailwind___
 
-### Project Setup 07 (Deploy or Hosting)
+**[🔼Back to Top](#table-of-contents)**
+
+### Project Setup 07 (`Deploy or Hosting`)
 
 - ___Deploy___ or ___Hosting___ in Netlify & Firebase
+
+**[🔼Back to Top](#table-of-contents)**
+
+## Inefficient Regular Expression Complexity in nth-check (`Fix vulnerabilities`)
+
+- [Help, npm audit says I have a vulnerability in react-scripts!](https://github.com/facebook/create-react-app/issues/11174 "facebook/create-react-app - github")
+- [github Dependabot alert: Inefficient Regular Expression Complexity in nth-check](https://stackoverflow.com/questions/71282206/github-dependabot-alert-inefficient-regular-expression-complexity-in-nth-check "stackoverflow.com")
+
+**[🔼Back to Top](#table-of-contents)**
+
+### `Solutions`
+
+`npm audit` says there's a warning about ___vulnerabilities___ in my project
+Open `package.json`. You will find this:
+
+``` JSON
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  }
+```
+
+Take `react-scripts` and move it to `devDependencies` (if you **don't have** it, **create it**):
+
+``` JSON
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "react-scripts": "4.0.3"
+  },
+```
+
+Then, ensure you run `npm audit --production` rather than `npm audit`.
+
+This will fix your warnings. 
+
+> `Notes:` Not necessary to use `npm audit fix` or `npm audit fix --force`. It can be ___added more vulnerabilities issues___ rather than fix the issues.
+
+**[🔼Back to Top](#table-of-contents)**
 
